@@ -1,0 +1,35 @@
+<div class="header">
+    <h1 class="page-title">Login</h1>
+    <ul class="breadcrumb">
+        <li><a [routerLink]="['/user-register']">Register</a> </li>
+        <li class="active">Login</li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <div class="row">
+        <div class="col-md-6">
+            <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+                <label style="color:red;">{{errorMessage}}</label>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input id="email" name="email" type="text" value="" class="form-control" required [(ngModel)]="model.email" #email="ngModel">
+                    <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                        Email is required
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input id="password" name="password" value="" class="form-control" required [(ngModel)]="model.passwordHash" #password="ngModel">
+                    <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+                        Password is required
+                    </div>
+                </div>
+                <div class="btn-toolbar list-toolbar">
+                    <button type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid"><i class="fa fa-save"></i> Login</button>
+                    <a [routerLink]="['/user-register']" class="btn btn-danger">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

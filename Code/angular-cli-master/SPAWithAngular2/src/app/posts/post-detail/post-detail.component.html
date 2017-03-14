@@ -1,0 +1,16 @@
+<div class="header" style="margin: 0px;">
+    <h1 class="page-title">Post Detail</h1>
+    <ul class="breadcrumb">
+        <li><a [routerLink]="['/post-list']">Posts</a> </li>
+        <li class="active">Post Detail</li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <div class="row blog-post" *ngIf="post">
+        <div class="col-sm-9 main-content">
+            <h1>{{post.title}}</h1> <br>
+            <p>{{post.description}}</p>
+        </div>
+    </div>
+</div>

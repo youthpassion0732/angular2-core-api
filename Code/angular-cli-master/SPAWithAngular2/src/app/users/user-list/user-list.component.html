@@ -1,0 +1,62 @@
+<div id="loading" *ngIf="!gridLoaded">
+    <img id="loading-image" src="src/loading.gif" alt="Loading..." />
+</div>
+
+<div class="header">
+    <div class="stats">
+        <p class="stat"><span class="label label-info">{{totalUsers}}</span> Total Users</p>
+    </div>
+    <h1 class="page-title">Users</h1>
+    <ul class="breadcrumb">
+        <li class="active">Users</li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading no-collapse">Users<span class="label label-warning">{{totalUsers}}</span></div>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of users">
+                            <td>{{user.id}}</td>
+                            <td>{{user.firstName}} {{user.lastName}}</td>
+                            <td>{{user.email}}</td>
+                            <td>
+                                <a href="#deleteModal" data-toggle="modal" (click)="onSelect(user)">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--delete popup modal-->
+<div class="modal small fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Delete Confirmation</h3>
+            </div>
+            <div class="modal-body">
+                <p class="error-text"><i class="fa fa-warning modal-icon"></i>Are you sure you want to delete the user?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button class="btn btn-danger" data-dismiss="modal" (click)="deleteUser()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

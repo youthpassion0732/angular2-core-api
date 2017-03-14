@@ -1,0 +1,66 @@
+<!--top header-->
+<div class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="" style="cursor: pointer;"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> {{title}}</span></a></div>
+
+    <div *ngIf="userLoggedIn" class="navbar-collapse collapse" style="height: 1px;">
+        <ul id="main-menu" class="nav navbar-nav navbar-right">
+            <li class="dropdown hidden-xs">
+                <a style="cursor: pointer;" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-user padding-right-small" style="position:relative;top: 3px;"></span> 
+                    {{userFullName}}
+                    <i class="fa fa-caret-down"></i>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a [routerLink]="['/user-list']">Users</a></li>
+                    <li class="divider"></li>
+                    <li><a style="cursor: pointer;" tabindex="-1" (click)="logout()">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<!--left side-bar-->
+<div class="sidebar-nav">
+    <ul>
+        <li>
+            <a style="cursor: pointer;" data-target=".dashboard-menu" class="nav-header" data-toggle="collapse">
+                <i class="fa fa-fw fa-dashboard"></i> Dashboard<i class="fa fa-collapse"></i>
+            </a>
+        </li>
+        <li>
+            <ul class="dashboard-menu nav nav-list collapse in">
+                <li><a [routerLink]="['/user-list']"><span class="fa fa-caret-right"></span> Users</a></li>
+                <li><a [routerLink]="['/post-list']"><span class="fa fa-caret-right"></span> Posts </a></li>
+                 <li *ngIf="!userLoggedIn"><a [routerLink]="['/user-login']"><span class="fa fa-caret-right"></span> Sign In</a></li>
+                <li *ngIf="!userLoggedIn"><a [routerLink]="['/user-register']"><span class="fa fa-caret-right"></span> Sign Up</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!--main content area-->
+<div class="content" style="min-height: 100px;">
+    <!-- routed view will be displayed here -->
+    <router-outlet></router-outlet>
+</div>
+
+<!--footer area-->
+<div class="footer">
+    <footer>
+        <hr>
+        <p class="pull-right">A <a href="#">Demo of Angular 2.0 with .Net Core API + Identity + Jwt Token Implementation</a> by
+            <a href="#">Khurram Shahzad</a>
+        </p>
+        <p>© 2017 <a href="#">SPAWithAngular2</a></p>
+    </footer>
+</div>

@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "mapRoot": "",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "sourceMap": true,
+    "sourceRoot": "",
+    "inlineSourceMap": true,
+    "target": "es6",
+    "lib": [
+      "es2016"
+    ],
+    "baseUrl": "",
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "jasmine",
+      "node"
+    ],
+    "paths": {
+      "@angular/cli/*": [ "./packages/@angular/cli/*" ],
+      "@ngtools/json-schema": [ "./packages/json-schema/src" ],
+      "@ngtools/logger": [ "./packages/logger/src" ],
+      "@ngtools/webpack": [ "./packages/webpack/src" ]
+    }
+  },
+  "exclude": [
+    "packages/@angular/cli/blueprints/*/files/**/*",
+    "dist/**/*",
+    "node_modules/**/*",
+    "tmp/**/*"
+  ]
+}

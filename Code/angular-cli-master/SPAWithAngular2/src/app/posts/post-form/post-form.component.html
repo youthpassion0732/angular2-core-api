@@ -1,0 +1,36 @@
+<div class="header">
+    <h1 class="page-title">{{pageTitle}}</h1>
+    <ul class="breadcrumb">
+        <li><a [routerLink]="['/post-list']">Posts</a> </li>
+        <li class="active">{{pageTitle}}</li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <div class="row">
+        <div class="col-md-6">
+            <form (ngSubmit)="onSubmit()" #postForm="ngForm">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input id="title" name="title" type="text" value="" class="form-control" required [(ngModel)]="model.title" #title="ngModel">
+                    <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
+                        Title is required
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="description" name="description" value="" rows="3" class="form-control" required [(ngModel)]="model.description"
+                        #description="ngModel">
+                   </textarea>
+                    <div [hidden]="description.valid || description.pristine" class="alert alert-danger">
+                        Description is required
+                    </div>
+                </div>
+                <div class="btn-toolbar list-toolbar">
+                    <button type="submit" class="btn btn-primary" [disabled]="!postForm.form.valid"><i class="fa fa-save"></i> Save</button>
+                    <a [routerLink]="['/post-list']" class="btn btn-danger">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
