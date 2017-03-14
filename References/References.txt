@@ -1,0 +1,26 @@
+Tutorial:
+https://drive.google.com/drive/folders/0B2t-Tmujl-IbNGw5VURQQVl2VVE
+
+Angular 2.0 Documentation:
+https://angular.io/docs/ts/latest/
+
+TypeScript Documentation:
+http://www.typescriptlang.org/docs/handbook/basic-types.html
+
+Startup Project:
+https://cli.angular.io/
+
+Jasmine and Karma Links:
+https://jasmine.github.io/
+https://karma-runner.github.io/1.0/index.html
+
+Asp.net core api tutorial:
+https://chsakell.com/2016/06/23/rest-apis-using-asp-net-core-and-entity-framework-core/
+http://stackoverflow.com/questions/37276882/no-executable-found-matching-command-dotnet-ef
+
+Jwt token implementation on Asp.net core api:
+https://code.msdn.microsoft.com/How-to-authorization-914d126b/sourcecode?fileId=163129&pathId=87568518
+-----
+https://stormpath.com/blog/token-authentication-asp-net-core
+https://goblincoding.com/2016/07/03/issuing-and-authenticating-jwt-tokens-in-asp-net-core-webapi-part-i/#issuing
+https://hgminerva.wordpress.com/2016/03/23/angular-2-and-asp-net-web-api-authentication/

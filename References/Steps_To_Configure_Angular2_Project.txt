@@ -1,0 +1,17 @@
+1) Download latest version of nodejs from https://nodejs.org/en/
+
+2) Update npm using command;
+   npm install npm@latest -g
+
+3) Install Angular 2.0 CLI using command;
+   npm install -g @angular/cli@latest
+
+4) cd D:\Projects\Training Projects\7) SPAWithAngular2\Code\angular-cli-master
+
+5) Run below commands to create new app inside "angular-cli-master" folder;
+   ng new SPAWithAngular2
+
+6) cd D:\Projects\Training Projects\7) SPAWithAngular2\Code\angular-cli-master\SPAWithAngular2
+
+7) Run below command to build app;
+   ng serve

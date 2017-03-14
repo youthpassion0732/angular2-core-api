@@ -1,0 +1,5 @@
+Open command prompt
+
+1) cd D:\Projects\My_Projects\SPAWithAngular2\Code\blog-core-api\BlogCoreApi
+2) dotnet ef migrations add "initial" (Enables initial migration)
+3) dotnet ef database update (creates the database)
